@@ -5,47 +5,51 @@ from kivy.lang import Builder
 from kivymd.uix.navigationdrawer import NavigationDrawerIconButton
 from kivymd.theming import ThemeManager
 from kivymd.toast import toast
-from views.base.base import ContentNavigationDrawer
+
 
 main_kv = """
-<ContentNavigationDrawer@MDNavigationDrawer>:
-    drawer_logo: 'demos/kitchen_sink/assets/drawer_logo.png'
 
-    NavigationDrawerSubheader:
-        text: "Menu:"
-
-
-NavigationLayout:
-    id: nav_layout
-
-    ContentNavigationDrawer:
-        id: nav_drawer
-
-    BoxLayout:
-        orientation: 'vertical'
-
-        MDToolbar:
-            id: toolbar
-            title: 'KivyMD Kitchen Sink'
-            md_bg_color: app.theme_cls.primary_color
-            background_palette: 'Primary'
-            background_hue: '500'
-            elevation: 10
-            left_action_items:
-                [['dots-vertical', lambda x: app.root.toggle_nav_drawer()]]
-
-        Widget:
+ ChatWindow
+# <ContentNavigationDrawer@MDNavigationDrawer>:
+#     drawer_logo: 'demos/kitchen_sink/assets/drawer_logo.png'
+# 
+#     NavigationDrawerSubheader:
+#         text: "Menu:"
+# 
+# 
+# NavigationLayout:
+#     id: nav_layout
+# 
+#     ContentNavigationDrawer:
+#         id: nav_drawer
+# 
+#     BoxLayout:
+#         orientation: 'vertical'
+#        
+#         MDToolbar:
+#             id: toolbar
+#             title: 'KivyMD Kitchen Sink'
+#             md_bg_color: app.theme_cls.primary_color
+#             background_palette: 'Primary'
+#             background_hue: '500'
+#             elevation: 10
+#             left_action_items:
+#                 [['dots-vertical', lambda x: app.root.toggle_nav_drawer()]]
+# 
+#         Widget:
+         
+        
 """
 
 class ChatApp(App):
     theme_cls = ThemeManager()
-    # theme_cls.primary_palette = 'Teal'
+    theme_cls.primary_palette = 'Teal'
 
     def build(self):
-        # self.main_widget = Builder.load_string(main_kv)
-        # return self.main_widget
+
         return ChatWindow()
-    #
+
+
     # def callback(self, instance, value):
     #     toast("Pressed item menu %d" % value)
     #

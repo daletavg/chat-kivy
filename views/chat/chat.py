@@ -23,7 +23,7 @@ from kivymd.uix.toolbar import MDToolbar
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivymd.theming import ThemeManager
 
-Builder.load_file('views/chat/chat.kv')
+# Builder.load_file('views/chat/chat.kv')
 # Builder.load_file(os.path.join(os.path.dirname(__file__)), 'chat.kv')
 
 
