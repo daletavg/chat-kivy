@@ -1,1 +1,66 @@
 #:include views/chat/chat.kv
+<BaseNavigation>
+    BoxLayout:
+        size: root.size
+        orientation: 'vertical'
+        MDToolbar:
+            id: toolbar
+            title: 'Chat'
+            left_action_items: [['menu', lambda x: root.open() ]]
+            md_bg_color: self.theme_cls.primary_color
+        ChatWindow
+#    size: root.size
+#    pos: root.pos
+#    BoxLayout:
+#        pos: self.pos
+#        size: self.size
+#        MDToolbar:
+#            pos: self.pos
+#            id: toolbar
+#            title: 'Chat'
+#            md_bg_color: self.theme_cls.primary_color
+
+
+    NavigationLayout:
+        size: root.size
+        pos: root.pos
+        id: navdrawer
+        MDNavigationDrawer:
+
+            size: root.size
+            pos: root.pos
+
+            Button:
+                text: "Hey"
+
+#    ChatWindow:
+#        size: root.size
+#        pos: root.pos
+
+#<ContentNavigationDrawer@MDNavigationDrawer>:
+#     drawer_logo: 'demos/kitchen_sink/assets/drawer_logo.png'
+#
+#     NavigationDrawerSubheader:
+#         text: "Menu:"
+#
+#
+#NavigationLayout:
+#    id: nav_layout
+#
+#    ContentNavigationDrawer:
+#        id: nav_drawer
+#
+#    BoxLayout:
+#        orientation: 'vertical'
+#
+#        MDToolbar:
+#            id: toolbar
+#            title: 'KivyMD Kitchen Sink'
+#            md_bg_color: app.theme_cls.primary_color
+#            background_palette: 'Primary'
+#            background_hue: '500'
+#            elevation: 10
+#            left_action_items:
+#                [['dots-vertical', lambda x: app.root.toggle_nav_drawer()]]
+#
+#        Widget:
